@@ -2,15 +2,31 @@ let
   pkgs = import <nixpkgs> {};
   projectName = "Unstable CMS";
   goPackagePath = "github.com/bragi-litlausson/UnstablePM";
+  execName = "upm";
   pwd = "$PWD";
+  build = pkgs.writeScriptBin "build" ''
+    if [ ! -d "./bin" ]
+    then
+      mkdir ./bin
+    fi
+
+    go build -o ./bin/${execName} main.go
+  '';
+  run = pkgs.writeScriptBin "run" ''
+    build
+    exec ./bin/${execName}
+  '';
 in pkgs.mkShell rec {
   name = projectName;
   buildInputs = with pkgs; [
+      figlet
       go
       cobra-cli
+      build
+      run
   ];
   shellHook= ''
-    set -v
+    figlet -f doom "Entering goland"
 
     export GOPATH="${pwd}/.go"
     export GOCACHE=""
@@ -18,7 +34,7 @@ in pkgs.mkShell rec {
     export PATH="$PATH:GOPATH";
 
     go mod init ${goPackagePath}
-
-    set +v
+    
+    figlet -f doom "Happy hacking!"
   '';
 }

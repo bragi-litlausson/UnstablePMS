@@ -4,6 +4,7 @@ import (
 	"os"
 
 	"github.com/bragi-litlausson/UnstablePM/cmd/new"
+	"github.com/bragi-litlausson/UnstablePM/cmd/project"
 
 	"github.com/spf13/cobra"
 )
@@ -23,4 +24,5 @@ func Execute() {
 
 func init() {
 	rootCmd.AddCommand(new.NewCmd)
+	rootCmd.AddCommand(project.ProjectCmd)
 }

@@ -1,4 +1,4 @@
-package license
+package new
 
 import (
 	"fmt"
@@ -8,8 +8,8 @@ import (
 )
 
 // addLicenseCmd represents the addLicense command
-var CMD = &cobra.Command{
-	Use:   "addLicense",
+var licenseCmd = &cobra.Command{
+	Use:   "license",
 	Short: "Adds 0-BSD license to the project",
 	Long:  `Adds 0-BSD license to the project.`,
 	Run: func(cmd *cobra.Command, args []string) {
@@ -18,16 +18,7 @@ var CMD = &cobra.Command{
 }
 
 func init() {
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// addLicenseCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// addLicenseCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	NewCmd.AddCommand(licenseCmd)
 }
 
 func createZeroLicense() {

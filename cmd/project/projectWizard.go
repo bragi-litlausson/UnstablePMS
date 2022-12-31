@@ -23,11 +23,10 @@ func configFileExists() bool {
 }
 
 func initializeProject() {
-	// project name
+	projectName := states.DefineProjectName()
+	fmt.Println(projectName)
 	projectType := states.DefineProjectType()
 	fmt.Println(projectType)
-	// git
-	// project type
 	// license
 	// readme
 	// shell?

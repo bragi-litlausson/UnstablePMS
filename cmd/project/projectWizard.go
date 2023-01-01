@@ -29,6 +29,6 @@ func initializeProject() {
 	fmt.Println(projectType)
 	licenseType := states.ChooseLicenseType()
 	fmt.Println(licenseType)
-	// readme
+	states.CreateReadme(projectName)
 	// shell?
 }

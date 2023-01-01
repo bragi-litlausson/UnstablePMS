@@ -27,10 +27,8 @@ func initializeProject() {
 	fmt.Println(projectName)
 	projectType := states.DefineProjectType()
 	fmt.Println(projectType)
-	// license
+	licenseType := states.DefineLicenseType()
+	fmt.Println(licenseType)
 	// readme
 	// shell?
-}
-
-func DefineProjectType() {
 }

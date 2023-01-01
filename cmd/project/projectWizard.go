@@ -25,9 +25,9 @@ func configFileExists() bool {
 func initializeProject() {
 	projectName := states.DefineProjectName()
 	fmt.Println(projectName)
-	projectType := states.DefineProjectType()
+	projectType := states.ChooseProjectType()
 	fmt.Println(projectType)
-	licenseType := states.DefineLicenseType()
+	licenseType := states.ChooseLicenseType()
 	fmt.Println(licenseType)
 	// readme
 	// shell?

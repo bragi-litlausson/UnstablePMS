@@ -1,4 +1,4 @@
-package data
+package license
 
 type LicenseData struct {
 	Name     string

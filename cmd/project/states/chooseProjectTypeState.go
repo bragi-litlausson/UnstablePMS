@@ -2,17 +2,17 @@ package states
 
 import (
 	"github.com/AlecAivazis/survey/v2"
+	"github.com/bragi-litlausson/UnstablePM/core"
 )
 
-var projectType string
-
-// Gets list of project type names and runs prompt asking user to select one
-func DefineProjectType() string {
+func ChooseProjectType() string {
 	typeNames := getTypeNames()
 	typeSelection := &survey.Select{
 		Message: "Choose project type:",
 		Options: typeNames,
 	}
+
+	projectType := ""
 	err := survey.AskOne(typeSelection, &projectType)
 	if err != nil {
 		panic(err)
@@ -22,10 +22,5 @@ func DefineProjectType() string {
 }
 
 func getTypeNames() []string {
-	keys := make([]string, 0, len(ProjectTypes))
-	for k, _ := range ProjectTypes {
-		keys = append(keys, k)
-	}
-
-	return keys
+	return core.GetMapKeys(ProjectTypes)
 }

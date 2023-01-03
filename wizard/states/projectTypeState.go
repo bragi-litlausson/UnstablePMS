@@ -5,7 +5,7 @@ import (
 	"github.com/bragi-litlausson/UnstablePM/core"
 )
 
-func ChooseProjectType() string {
+func RunProjectTypeState() core.ProjectType {
 	typeNames := getTypeNames()
 	typeSelection := &survey.Select{
 		Message: "Choose project type:",
@@ -18,9 +18,9 @@ func ChooseProjectType() string {
 		panic(err)
 	}
 
-	return projectType
+	return core.ProjectTypes[projectType]
 }
 
 func getTypeNames() []string {
-	return core.GetMapKeys(ProjectTypes)
+	return core.GetMapKeys(core.ProjectTypes)
 }

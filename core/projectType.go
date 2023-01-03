@@ -1,18 +1,17 @@
-package states
+package core
 
 type ProjectType struct {
-	name string
-	pkgs string
+	Name string
+	Pkgs []string
 }
 
 var ProjectTypes = map[string]ProjectType{
-	GoCli.name: GoCli,
+	GoCli.Name: GoCli,
 }
 
 var (
 	GoCli ProjectType = ProjectType{
-		name: "Go CLI",
-		pkgs: `
-		`,
+		Name: "Go CLI",
+		Pkgs: []string{"go", "cobra-cli"},
 	}
 )

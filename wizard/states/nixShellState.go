@@ -13,6 +13,7 @@ import (
 func RunNixShellState(projectData *core.ProjectData) {
 	prompt := &survey.Confirm{
 		Message: "Create shell.nix?",
+		Default: true,
 	}
 	create := false
 	survey.AskOne(prompt, &create)

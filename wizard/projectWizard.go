@@ -2,25 +2,18 @@ package wizard
 
 import (
 	"fmt"
-	"os"
 
 	"github.com/bragi-litlausson/UnstablePM/core"
 	"github.com/bragi-litlausson/UnstablePM/wizard/states"
 )
 
 func StartWizard() {
-	init := configFileExists()
 
-	if init {
+	if core.ProjectFileExists() {
 		fmt.Println("NOT IMPLTEMENTED")
 	} else {
 		initializeProject()
 	}
-}
-
-func configFileExists() bool {
-	_, err := os.Stat(".upm")
-	return err == nil
 }
 
 func initializeProject() {

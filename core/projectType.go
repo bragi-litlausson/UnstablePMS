@@ -12,6 +12,6 @@ var ProjectTypes = map[string]ProjectType{
 var (
 	GoCli ProjectType = ProjectType{
 		Name: "Go CLI",
-		Pkgs: []string{"go", "cobra-cli"},
+		Pkgs: []string{"go", "cobra-cli", "figlet"},
 	}
 )

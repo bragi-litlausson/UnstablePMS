@@ -88,7 +88,7 @@ func createShell(projectData *core.ProjectData) {
 
 	defer file.Close()
 
-	err = t.Execute(file, projectData)
+	err = t.Execute(file, projectData.ShellData)
 	if err != nil {
 		panic(err)
 	}
@@ -106,11 +106,11 @@ const shellTemplate = `let
       mkdir ./bin
     fi
 
-    go build -o ./bin/${{{.ExecName}}} main.go
+    go build -o ./bin/${execName} main.go
   '';
   run = pkgs.writeScriptBin "run" ''
     build
-    exec ./bin/${{{.ExecName}}} $*
+    exec ./bin/${execName} $*
   '';
   format = pkgs.writeScriptBin "format" ''
     gofmt -l -w -s .
@@ -122,10 +122,13 @@ in pkgs.mkShell rec {
       build
       run
 
-			{{.Pkgs}}
-      figlet
-      go
-      cobra-cli
+			{{range .Pkgs}}
+			{{.}}
+			{{end}}
+
+			{{range .AdditionalPkgs}}
+			{{.}}
+			{{end}}
   ];
   shellHook= ''
     figlet -f doom "Entering goland"

@@ -1,6 +1,6 @@
 let
   pkgs = import <nixpkgs> {};
-  projectName = "Unstable PM";
+  projectName = "UnstablePM";
   goPackagePath = "github.com/bragi-litlausson/UnstablePM";
   execName = "upm";
   pwd = "$PWD";
@@ -26,9 +26,15 @@ in pkgs.mkShell rec {
       build
       run
 
-      figlet
-      go
-      cobra-cli
+			
+			go
+			
+			cobra-cli
+			
+			figlet
+			
+
+			
   ];
   shellHook= ''
     figlet -f doom "Entering goland"

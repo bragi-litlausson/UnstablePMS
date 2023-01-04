@@ -30,4 +30,6 @@ func initializeProject() {
 	data.LicenseType = states.ChooseLicenseType()
 	states.CreateReadme(data.ProjectName)
 	states.RunNixShellState(data)
+
+	states.RunProjectFilesState(data)
 }

@@ -25,10 +25,10 @@ func configFileExists() bool {
 
 func initializeProject() {
 	data := new(core.ProjectData)
-	data.ProjectName = states.DefineProjectName()
+	data.ProjectName = states.RunProjectNameState()
 	data.ProjectType = states.RunProjectTypeState()
-	data.LicenseType = states.ChooseLicenseType()
-	states.CreateReadme(data.ProjectName)
+	data.LicenseType = states.RunLicenseState()
+	states.RunReadmeState(data.ProjectName)
 	states.RunNixShellState(data)
 
 	states.RunProjectFilesState(data)

@@ -5,7 +5,7 @@ import (
 	"github.com/bragi-litlausson/UnstablePM/core"
 )
 
-func ChooseLicenseType() string {
+func RunLicenseState() string {
 	licenseTypes := core.GetLicenseNames()
 	licensePrompt := &survey.Select{
 		Message: "Choose license type",

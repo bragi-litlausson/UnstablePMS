@@ -5,7 +5,7 @@ import (
 	"github.com/bragi-litlausson/UnstablePM/core"
 )
 
-func CreateReadme(projectName string) {
+func RunReadmeState(projectName string) {
 	prompt := &survey.Select{
 		Message: "Create README.md",
 		Options: []string{core.TemplateReadme, core.EmptyReadme, core.NoReadme},

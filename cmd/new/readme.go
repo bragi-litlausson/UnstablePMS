@@ -11,7 +11,7 @@ var readmeCmd = &cobra.Command{
 	Long: `Create README.md from template
 	In case "--name"  flag is not provided place holder name will be used.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		states.CreateReadme(projectName)
+		states.RunReadmeState(projectName)
 	},
 }
 
@@ -20,5 +20,5 @@ var projectName = ""
 func init() {
 	readmeCmd.Flags().StringVarP(&projectName, "name", "n", "", "Name of the project")
 
-	NewCmd.AddCommand(readmeCmd)
+	//NewCmd.AddCommand(readmeCmd)
 }

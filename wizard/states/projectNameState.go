@@ -2,7 +2,7 @@ package states
 
 import "github.com/AlecAivazis/survey/v2"
 
-func DefineProjectName() string {
+func RunProjectNameState() string {
 	namePrompt := &survey.Input{
 		Message: "Name of the project:",
 	}

@@ -16,7 +16,7 @@ func CreateReadmeFile(t string, name string) {
 	case t == TemplateReadme:
 		createReadmeTemplate(name)
 	case t == EmptyReadme:
-		CreateFile("README.md", "")
+		WriteTextFile("README.md", "")
 	case t == NoReadme:
 		return
 	}

@@ -9,6 +9,7 @@ More in-depth project description
 ## Built with
 
 ### Library #1
+
 Awesome library used to create this project
 
 # Getting started
@@ -19,7 +20,7 @@ Any requirements to run this
 
 ## Installing
 
-How to install god damn thing
+How to install damn thing
 
 ## Usage
 

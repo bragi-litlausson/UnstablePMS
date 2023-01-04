@@ -18,7 +18,7 @@ var licenseCmd = &cobra.Command{
 }
 
 func init() {
-	NewCmd.AddCommand(licenseCmd)
+	//NewCmd.AddCommand(licenseCmd)
 }
 
 func createZeroLicense() {

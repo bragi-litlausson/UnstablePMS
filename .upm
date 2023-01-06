@@ -1,4 +1,4 @@
-projectname: UnstablePM
+projectname: UnstablePMS
 projecttype:
   name: Go CLI
   pkgs:
@@ -7,8 +7,8 @@ projecttype:
   - figlet
 licensetype: 0-BSD
 shelldata:
-  projectname: UnstablePM
-  execname: upm
+  projectname: UnstablePMS
+  execname: upms
   pkgs:
   - go
   - cobra-cli

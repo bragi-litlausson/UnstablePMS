@@ -3,8 +3,8 @@ package wizard
 import (
 	"fmt"
 
-	"github.com/bragi-litlausson/UnstablePM/core"
-	"github.com/bragi-litlausson/UnstablePM/wizard/states"
+	"github.com/bragi-litlausson/UnstablePMS/core"
+	"github.com/bragi-litlausson/UnstablePMS/wizard/states"
 )
 
 func StartWizard() {

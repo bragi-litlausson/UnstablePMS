@@ -1,8 +1,8 @@
 let
   pkgs = import <nixpkgs> {};
-  projectName = "UnstablePM";
-  goPackagePath = "github.com/bragi-litlausson/UnstablePM";
-  execName = "upm";
+  projectName = "UnstablePMS";
+  goPackagePath = "github.com/bragi-litlausson/UnstablePMS";
+  execName = "upms";
   pwd = "$PWD";
   build = pkgs.writeScriptBin "build" ''
     if [ ! -d "./bin" ]

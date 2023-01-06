@@ -2,7 +2,7 @@ package states
 
 import (
 	"github.com/AlecAivazis/survey/v2"
-	"github.com/bragi-litlausson/UnstablePM/core"
+	"github.com/bragi-litlausson/UnstablePMS/core"
 )
 
 func RunReadmeState(projectName string) {

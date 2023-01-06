@@ -1,7 +1,7 @@
 package new
 
 import (
-	"github.com/bragi-litlausson/UnstablePM/wizard/states"
+	"github.com/bragi-litlausson/UnstablePMS/wizard/states"
 	"github.com/spf13/cobra"
 )
 

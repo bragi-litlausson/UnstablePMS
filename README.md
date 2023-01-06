@@ -1,4 +1,4 @@
-# UnstablePM
+# UnstablePMS
 
 Short description of the project
 

@@ -3,7 +3,7 @@ package cmd
 import (
 	"os"
 
-	"github.com/bragi-litlausson/UnstablePM/cmd/project"
+	"github.com/bragi-litlausson/UnstablePMS/cmd/project"
 
 	"github.com/spf13/cobra"
 )

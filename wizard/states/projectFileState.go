@@ -1,7 +1,7 @@
 package states
 
 import (
-	"github.com/bragi-litlausson/UnstablePM/core"
+	"github.com/bragi-litlausson/UnstablePMS/core"
 	"gopkg.in/yaml.v2"
 )
 

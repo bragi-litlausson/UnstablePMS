@@ -1,7 +1,7 @@
 package project
 
 import (
-	"github.com/bragi-litlausson/UnstablePM/wizard"
+	"github.com/bragi-litlausson/UnstablePMS/wizard"
 	"github.com/spf13/cobra"
 )
 
